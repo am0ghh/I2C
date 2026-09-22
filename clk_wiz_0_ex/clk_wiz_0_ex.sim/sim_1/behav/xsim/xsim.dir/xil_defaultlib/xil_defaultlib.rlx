@@ -1,0 +1,9 @@
+0.7
+2020.2
+Jun 16 2026
+11:10:11
+c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1788325219,verilog,,c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_exdes.v,,clk_wiz_0,,,../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef;../../../../clk_wiz_0_ex.ip_user_files/ipstatic,,,,,
+c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1788325219,verilog,,c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef;../../../../clk_wiz_0_ex.ip_user_files/ipstatic,,,,,
+c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.sim/sim_1/behav/xsim/glbl.v,1773749341,verilog,,,,glbl,,,,,,,,
+c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_exdes.v,1790098760,verilog,,c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v,,clk_wiz_0_exdes,,,../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef;../../../../clk_wiz_0_ex.ip_user_files/ipstatic,,,,,
+c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v,1790098760,verilog,,,,clk_wiz_0_tb,,,../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef;../../../../clk_wiz_0_ex.ip_user_files/ipstatic,,,,,

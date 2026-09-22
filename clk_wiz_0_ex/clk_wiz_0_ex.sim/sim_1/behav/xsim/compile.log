@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_exdes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_exdes
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/clk_wiz_0_ex.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

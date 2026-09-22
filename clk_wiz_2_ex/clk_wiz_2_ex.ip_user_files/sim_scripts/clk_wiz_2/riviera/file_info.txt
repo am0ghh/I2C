@@ -1,0 +1,5 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../Downloads/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../ipstatic/ipshared/ee6d"incdir="../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic/ipshared/ee6d"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../Downloads/2026.1/Vivado/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../ipstatic/ipshared/ee6d"incdir="../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic/ipshared/ee6d"
+clk_wiz_2_clk_wiz.v,verilog,xil_defaultlib,../../../../clk_wiz_2_ex.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_clk_wiz.v,incdir="../../../ipstatic/ipshared/ee6d"incdir="../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic/ipshared/ee6d"
+clk_wiz_2.v,verilog,xil_defaultlib,../../../../clk_wiz_2_ex.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.v,incdir="../../../ipstatic/ipshared/ee6d"incdir="../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic/ipshared/ee6d"
+glbl.v,Verilog,xil_defaultlib,glbl.v

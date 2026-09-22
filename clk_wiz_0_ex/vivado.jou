@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Sep 22 10:39:20 2026
+# Process ID         : 16240
+# Current directory  : c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex
+# Command line       : vivado.exe -notrace -source c:/Users/ptat2/Projects/I2C/I2C.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl
+# Log file           : c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/vivado.log
+# Journal file       : c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex\vivado.jou
+# Running On         : ThinkPad
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen AI 7 PRO 350 w/ Radeon 860M          
+# CPU Frequency      : 1996 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33439 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35587 MB
+# Available Virtual  : 7277 MB
+#-----------------------------------------------------------
+start_gui
+source c:/Users/ptat2/Projects/I2C/I2C.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_simulation
+source clk_wiz_0_tb.tcl
+run 2 ms
+step
+run all
+close_sim

@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+Timing checks are not valid
+Timing checks are valid
+Freq of CLK_OUT[1] ( in MHz ) : 40.000000
+
+SIMULATION PASSED
+Test Completed Successfully
+SYSTEM_CLOCK_COUNTER : 1303
+
+$finish called at time : 10428100 ps : File "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v" Line 130
+The current simulation has finished. Please use 'restart' to begin a new simulation.
+$finish called at time : 10428100 ps : File "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v" Line 130
+The current simulation has finished. Please use 'restart' to begin a new simulation.
+$finish called at time : 10428100 ps : File "c:/Users/ptat2/Projects/I2C/clk_wiz_0_ex/imports/clk_wiz_0_tb.v" Line 130

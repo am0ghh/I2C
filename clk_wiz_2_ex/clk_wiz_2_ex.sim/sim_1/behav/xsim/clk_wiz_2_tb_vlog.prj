@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Downloads/2026.1/Vivado/data/rsb/busdef" --include "../../../../clk_wiz_2_ex.ip_user_files/ipstatic/ipshared/ee6d" \
+"../../../../clk_wiz_2_ex.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_clk_wiz.v" \
+"../../../../clk_wiz_2_ex.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.v" \
+"../../../../imports/clk_wiz_2_exdes.v" \
+"../../../../imports/clk_wiz_2_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
