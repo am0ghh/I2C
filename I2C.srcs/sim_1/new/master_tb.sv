@@ -24,17 +24,19 @@ module master_tb;
     logic clk = 0;
     logic rst = 0;
     logic locked = 0;
+    //logic Din = 0;
     wire sda;
     wire scl;
-    
+    reg [6:0] addr;
  
     master uut(
         .clk(clk),
         .rst(rst),
         .sda(sda),
         .scl(scl),
-        .locked(locked)
-        
+        .locked(locked),
+        .addr(addr)
+        //.Din(Din)
     );
     
     //providing an input clock signal of 40 MHz
@@ -45,10 +47,13 @@ module master_tb;
     
     initial begin
         clk = 0;
-        rst = 0;
+        rst = 1;
         
-        #40 rst = 1;
-        #40 rst = 0; 
+        #40 rst = 0;
+        
+        addr  = 6'b101010;
+        //Din = 0;
+        
     end
     
     
