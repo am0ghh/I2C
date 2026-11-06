@@ -24,7 +24,9 @@ module master_tb;
     logic clk = 0;
     logic rst = 0;
     logic locked = 0;
+    logic start = 0;
     //logic Din = 0;
+    logic rw = 0;
     wire sda;
     wire scl;
     reg [6:0] addr;
@@ -35,7 +37,11 @@ module master_tb;
         .sda(sda),
         .scl(scl),
         .locked(locked),
-        .addr(addr)
+        .addr(addr),
+        .start(start),
+        .rw(RW)
+        
+        
         //.Din(Din)
     );
     
@@ -44,14 +50,17 @@ module master_tb;
         #12.5 clk = ~clk;
     end
     
-    
     initial begin
         clk = 0;
         rst = 1;
+        start = 0;
         
-        #40 rst = 0;
+        #4000 rst = 0;
         
+        #4000;
         addr  = 6'b101010;
+        start = 1'b1;
+        rw = 1'b1;
         //Din = 0;
         
     end
