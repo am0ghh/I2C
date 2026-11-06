@@ -8,4 +8,8 @@ if { [string length $curr_wave] == 0 } {
   }
 }
 
+<<<<<<< HEAD
 run 1ms
+=======
+run 1000ns
+>>>>>>> 1d55b85 (Initial commit + clocking wizard)

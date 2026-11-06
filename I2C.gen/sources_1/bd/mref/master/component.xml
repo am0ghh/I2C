@@ -55,7 +55,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>7e9948e2</spirit:value>
+=======
+            <spirit:value>bca7a8c8</spirit:value>
+>>>>>>> 1d55b85 (Initial commit + clocking wizard)
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -68,7 +72,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>7e9948e2</spirit:value>
+=======
+            <spirit:value>bca7a8c8</spirit:value>
+>>>>>>> 1d55b85 (Initial commit + clocking wizard)
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -122,6 +130,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< HEAD
         <spirit:name>addr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -186,6 +195,8 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+=======
+>>>>>>> 1d55b85 (Initial commit + clocking wizard)
         <spirit:name>sda</spirit:name>
         <spirit:wire>
           <spirit:direction>inout</spirit:direction>
@@ -246,7 +257,11 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
+<<<<<<< HEAD
       <xilinx:coreCreationDateTime>2026-10-28T16:53:40Z</xilinx:coreCreationDateTime>
+=======
+      <xilinx:coreCreationDateTime>2026-09-22T17:12:09Z</xilinx:coreCreationDateTime>
+>>>>>>> 1d55b85 (Initial commit + clocking wizard)
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2026.1</xilinx:xilinxVersion>
