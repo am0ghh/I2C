@@ -1,22 +1,13 @@
 {
   "design": {
     "design_info": {
-<<<<<<< HEAD
       "boundary_crc": "0x8828A4AFB2D08620",
-=======
-      "boundary_crc": "0x8736A40EE05A9306",
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../I2C.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-<<<<<<< HEAD
       "tool_version": "2026.1"
-=======
-      "tool_version": "2026.1",
-      "validated": "true"
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
     },
     "design_tree": {
       "clk_wiz_0": "",
@@ -27,13 +18,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-<<<<<<< HEAD
-=======
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -41,50 +25,16 @@
       },
       "sys_clk": {
         "type": "clk",
-<<<<<<< HEAD
         "direction": "I"
-=======
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_sys_clk",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
       },
       "rst_0": {
         "type": "rst",
         "direction": "I",
         "parameters": {
-<<<<<<< HEAD
-=======
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
         }
-<<<<<<< HEAD
       },
       "addr_0": {
         "direction": "I",
@@ -98,8 +48,6 @@
       },
       "rw_0": {
         "direction": "I"
-=======
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
       }
     },
     "components": {
@@ -163,42 +111,16 @@
               "ASSOCIATED_RESET": {
                 "value": "rst",
                 "value_src": "constant"
-<<<<<<< HEAD
-=======
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
               }
             }
           },
           "rst": {
             "type": "rst",
-<<<<<<< HEAD
             "direction": "I"
-=======
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
           },
           "locked": {
             "direction": "I"
           },
-<<<<<<< HEAD
           "addr": {
             "direction": "I",
             "left": "6",
@@ -217,8 +139,6 @@
           "rw": {
             "direction": "I"
           },
-=======
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
           "sda": {
             "direction": "IO"
           },
@@ -229,15 +149,12 @@
       }
     },
     "nets": {
-<<<<<<< HEAD
       "addr_0_1": {
         "ports": [
           "addr_0",
           "master_0/addr"
         ]
       },
-=======
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
       "clk_in1_0_1": {
         "ports": [
           "sys_clk",
@@ -267,7 +184,6 @@
           "rst_0",
           "master_0/rst"
         ]
-<<<<<<< HEAD
       },
       "rw_0_1": {
         "ports": [
@@ -280,8 +196,6 @@
           "tx_data_0",
           "master_0/tx_data"
         ]
-=======
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
       }
     }
   }

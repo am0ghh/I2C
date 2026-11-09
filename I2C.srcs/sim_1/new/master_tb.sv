@@ -24,36 +24,25 @@ module master_tb;
     logic clk = 0;
     logic rst = 0;
     logic locked = 0;
-<<<<<<< HEAD
     logic start = 0;
     //logic Din = 0;
     logic rw = 0;
     wire sda;
     wire scl;
     reg [6:0] addr;
-=======
-    wire sda;
-    wire scl;
-    
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
  
     master uut(
         .clk(clk),
         .rst(rst),
         .sda(sda),
         .scl(scl),
-<<<<<<< HEAD
         .locked(locked),
         .addr(addr),
         .start(start),
-        .rw(RW)
+        .rw(rw)
         
         
         //.Din(Din)
-=======
-        .locked(locked)
-        
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
     );
     
     //providing an input clock signal of 40 MHz
@@ -61,7 +50,6 @@ module master_tb;
         #12.5 clk = ~clk;
     end
     
-<<<<<<< HEAD
     initial begin
         clk = 0;
         rst = 1;
@@ -71,19 +59,12 @@ module master_tb;
         
         #4000;
         addr  = 6'b101010;
+        
         start = 1'b1;
-        rw = 1'b1;
-        //Din = 0;
+        rw = 1'b0;
         
-=======
-    
-    initial begin
-        clk = 0;
-        rst = 0;
+        //for later: test for address NACK!
         
-        #40 rst = 1;
-        #40 rst = 0; 
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
     end
     
     

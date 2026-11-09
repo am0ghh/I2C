@@ -24,7 +24,6 @@ module master(
     input logic clk, //--> 40 MHz clock from clk_wiz
     input logic rst,
     input logic  locked, //--> detects when PLL from clk wiz has stabilized
-<<<<<<< HEAD
     input logic start, 
     input logic [6:0] addr, //7-bit address
     //input logic Din,
@@ -43,6 +42,8 @@ module master(
     logic [2:0] bit_count;
     //buffer register for address 
     logic [6:0] addr_buf;
+    logic add_nack;
+    logic ack1;
     
     //counter for SCL line, 40 MHz --> 400 kHz for I2C fast mode
     logic [5:0] count = 6'b0; //counter to count to 4 to toggle SCL clock 
@@ -91,25 +92,45 @@ module master(
                 end
                 //state <= ADDR;
             end else if (state == ADDR) begin
+                if (add_nack) begin
+                    state <= IDLE;
+                end else begin 
                 //addr_buf <= {addr[5:0], 1'b0};
-                sda_out <= addr_buf[6];
-                //if (scl_out) begin sda_out <= addr_buf[6]; end
-                if ((!scl_out) && (count == 6'd25) && (bit_count  < 7)) begin
-                    addr_buf <= addr_buf << 1'b1;
-                    bit_count <= bit_count + 1'b1;
-                end else if (bit_count == 7) begin
-                    state <= RW;
-                    bit_count <= 0;
+                    sda_out <= addr_buf[6];
+                    //if (scl_out) begin sda_out <= addr_buf[6]; end
+                    
+                    if ((!scl_out) && (count == 6'd25) && (bit_count  < 7)) begin
+                        addr_buf <= addr_buf << 1'b1;
+                        bit_count <= bit_count + 1'b1;
+                    end else if (bit_count == 7) begin
+                        state <= RW;
+                        //count <= 0;
+                        bit_count <= 0;
+                    end
                 end
             end else if (state == RW) begin
-                if ((!scl_out) && (count == 6'd25) && (bit_count == 0)) begin
-                    sda_out <= RW;
+                sda_out <= rw;
+                if ((!scl_out) && (count == 6'd25) && (bit_count < 1)) begin
+                  
                     bit_count <= 1'b1;
-                end else begin
+                    //bit_count <= 1'b1;
+                end else if (bit_count == 1) begin
+                    bit_count <= 1'b0;
                     sda_out <= 1'b1;
                     state <= ACK1;
                 end
+                
             end else if (state == ACK1) begin
+                sda_out <= ack1;
+                if ((!scl_out) && (count == 6'd25) && (bit_count < 1)) begin
+                    bit_count <= 1'b1;
+                end else if (bit_count == 1'b1) begin
+                    if (ack1) begin
+                        state <= IDLE;
+                    end else begin
+                        state <= DATA;
+                    end
+                end
                 //implement later
             end
         end
@@ -121,36 +142,6 @@ module master(
     assign scl = scl_out ? 1'bz : 1'b0;
     //assign addr_buf = addr;
     
-=======
-    //pullup resistor for SDA and SCL lines
-    (* PULLUP = "TRUE" *) inout wire sda, scl
-    
-    );
-    
-    logic scl_out;
-    typedef enum {IDLE, START, DATA, STOP, RESET} states;
-    states state; 
-    
-    //counter for SCL line, 40 MHz --> 400 kHz
-    logic [5:0] count = 6'b0; //counter to count to 4 to toggle SCL clock 
-    always_ff @(posedge clk) begin
-        if (rst) begin
-            count <= 6'b0;
-            scl_out <= 1'b0;
-        end else if (count == 6'd49) begin
-            count <= 6'b0;
-            scl_out <= ~scl_out;
-        end else begin
-            count += 6'b1;
-        end
-    end
-    
-    
-    
-    
-    
-    assign scl = scl_out ? 1'bz : 1'b0;
->>>>>>> 1d55b85 (Initial commit + clocking wizard)
     //assign scl = scl_out;
 
 endmodule
