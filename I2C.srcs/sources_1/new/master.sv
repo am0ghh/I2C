@@ -27,23 +27,25 @@ module master(
     input logic start, 
     input logic [6:0] addr, //7-bit address
     //input logic Din,
-    input logic [7:0] tx_data,
-    output logic [7:0] rx_data, 
+    input logic [7:0] tx_data, //when rw = 0
+    //output logic [7:0] rx_data, //when rw = 1
     input logic rw, //--> (0 = write, 1 = read)
     //pullup resistor for SDA and SCL lines
     (* PULLUP = "TRUE" *) inout wire sda, scl
     );
     
+    logic [7:0] data_buf;
     logic sda_out;
     logic scl_out;
     //reg Din;
-    typedef enum {IDLE, START, ADDR, RW, ACK1, DATA, STOP, RESET} states;
+    typedef enum {IDLE, START, ADDR, RW, ACK1, DATA, ACK2, STOP, RESET} states;
     states state; 
     logic [2:0] bit_count;
     //buffer register for address 
     logic [6:0] addr_buf;
     logic add_nack;
     logic ack1;
+    
     
     //counter for SCL line, 40 MHz --> 400 kHz for I2C fast mode
     logic [5:0] count = 6'b0; //counter to count to 4 to toggle SCL clock 
@@ -56,6 +58,7 @@ module master(
             state <= IDLE;
             addr_buf <= 7'b0;
             bit_count <= 3'b0;
+            data_buf <= 8'b0;
             
         end else if ((state != IDLE)) begin
             if (count == 6'd49) begin
@@ -89,6 +92,11 @@ module master(
                     scl_out <= 1'b0;
                     addr_buf <= addr[6:0];
                     state <= ADDR;
+                    if (!rw) begin
+                        data_buf <= tx_data;
+                    end else begin
+                        data_buf <= 8'b0;
+                    end
                 end
                 //state <= ADDR;
             end else if (state == ADDR) begin
@@ -131,7 +139,25 @@ module master(
                         state <= DATA;
                     end
                 end
-                //implement later
+               
+            end else if (state == DATA) begin
+                if (!rw) begin //write -- PISO shift register
+                    //data_buf <= tx_data;
+                    sda_out <= data_buf[7];
+                    if ((!scl_out) && (count == 6'd25) && (bit_count  < 8)) begin
+                        data_buf <= data_buf << 1'b1;
+                        bit_count <= bit_count + 1'b1;
+                    end else if (bit_count == 8) begin
+                        state <= ACK2;
+                        //count <= 0;
+                        bit_count <= 0;
+                    end
+                end else begin
+                    data_buf[0] <= sda;
+                
+                end
+                
+                
             end
         end
 

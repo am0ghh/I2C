@@ -30,6 +30,7 @@ module master_tb;
     wire sda;
     wire scl;
     reg [6:0] addr;
+    reg [7:0] tx_data;
  
     master uut(
         .clk(clk),
@@ -39,7 +40,8 @@ module master_tb;
         .locked(locked),
         .addr(addr),
         .start(start),
-        .rw(rw)
+        .rw(rw),
+        .tx_data(tx_data)
         
         
         //.Din(Din)
@@ -58,11 +60,12 @@ module master_tb;
         #4000 rst = 0;
         
         #4000;
-        addr  = 6'b101010;
+        addr  = 7'b1010101;
         
         start = 1'b1;
         rw = 1'b0;
         
+        tx_data = 8'b10101010;
         //for later: test for address NACK!
         
     end
